@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'Your first name'
+        required: true
+        default: 'John'
+      last_name:
+        description: 'Your last name'
+        required: true
+        default: 'Doe'
+      age:
+        description: 'Your age range'
+        required: true
+        default: '30'
+      favorite_color:
+        description: 'Favorite color'
+        required: true
+        default: 'blue'
+      favorite_food:
+        description: 'Favorite food'
+        required: true
+        default: 'pizza'
+      favorite_movie:
+        description: 'Favorite movie'
+        required: true
+        default: 'Inception'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      USER_NAME: ${{ github.event.inputs.username }}
+      LAST_NAME: ${{ github.event.inputs.last_name }}
+      AGE: ${{ github.event.inputs.age }}
+      FAVORITE_COLOR: ${{ github.event.inputs.favorite_color }}
+      FAVORITE_FOOD: ${{ github.event.inputs.favorite_food }}
+      FAVORITE_MOVIE: ${{ github.event.inputs.favorite_movie }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x ./script/bash.sh
+
+      - name: Run bash script
+        run: ./script/bash.sh

@@ -1,0 +1,37 @@
+name: Learn GitHub Actions
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows you to run it manually from the Actions tab
+
+jobs:
+  learn-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Say Hello
+      run: echo "👋 Hello, GitHub Actions!"
+
+    - name: Show current date and time
+      run: date && time
+
+    - name: List files in repo
+      run: ls -la
+
+    - name: List branches
+      run: git branch -a
+
+    - name: echo name
+      run: echo "my name is LAT"
+
+
+    - name: Run a simple script
+      run: |
+        echo "This is a multi-line script"
+        echo "You can learn step by step"
