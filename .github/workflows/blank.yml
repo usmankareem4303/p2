@@ -10,27 +10,27 @@ on:
       username:
         description: 'Your first name'
         required: true
-        default: 'John'
+        default: 'Usman'
       last_name:
         description: 'Your last name'
         required: true
-        default: 'Doe'
+        default: 'Kareem'
       age:
         description: 'Your age range'
         required: true
-        default: '30'
+        default: '21'
       favorite_color:
         description: 'Favorite color'
         required: true
-        default: 'blue'
+        default: 'green'
       favorite_food:
         description: 'Favorite food'
         required: true
-        default: 'pizza'
+        default: 'pasta'
       favorite_movie:
         description: 'Favorite movie'
         required: true
-        default: 'Inception'
+        default: 'bleach'
 
 jobs:
   build:
