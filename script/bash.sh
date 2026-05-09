@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Use default values if environment variables are not set
-USER_NAME="${USER_NAME:-John}"
-LAST_NAME="${LAST_NAME:-Doe}"
-AGE="${AGE:-30}"
-FAVORITE_COLOR="${FAVORITE_COLOR:-blue}"
-FAVORITE_FOOD="${FAVORITE_FOOD:-rice}"
-FAVORITE_MOVIE="${FAVORITE_MOVIE:-Inception}"
+USER_NAME="${USER_NAME:-usman}"
+LAST_NAME="${LAST_NAME:-kareem}"
+AGE="${AGE:-21}"
+FAVORITE_COLOR="${FAVORITE_COLOR:-green}"
+FAVORITE_FOOD="${FAVORITE_FOOD:-pasta}"
+FAVORITE_MOVIE="${FAVORITE_MOVIE:-transformers}"
 
 echo "Hello $USER_NAME"
 echo "Hello $USER_NAME $LAST_NAME"
